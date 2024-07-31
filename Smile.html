@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile</title>
+    <style>
+        /* Basic body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #ffffff;
+        }
+        /* Header styling */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #87dce7;
+            color: white;
+            width: 100%;
+        }
+        /* Main content styling */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        /* Question styling */
+        p.question {
+            margin-bottom: 10px;
+            margin-top: 40px;
+        }
+        /* Input styling */
+        input[type="number"] {
+            width: 50px;
+            padding: 5px;
+            margin: 10px 0;
+            font-size: 1em;
+        }
+        /* Styling for text areas */
+        textarea {
+            width: 100%;
+            max-width: 500px;
+            height: 100px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        /* Styling for the submit button */
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #87dce7;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #66c2cf;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>You are beautiful!</h1>
+    </header>
+    <main>
+        <form id="feedbackForm" action="submit_feedback.php" method="POST">
+            <p class="question">How was your day? (Rate 1-5)</p>
+            <input type="number" name="rating_day" id="rating_day" min="1" max="5" required>
+
+            <p class="question">How happy were you? (Rate 1-5)</p>
+            <input type="number" name="rating_happy" id="rating_happy" min="1" max="5" required>
+
+            <p class="question">How productive were you? (Rate 1-5)</p>
+            <input type="number" name="rating_productive" id="rating_productive" min="1" max="5" required>
+
+            <p class="question">Write 3 positive events or experiences from today.</p>
+            <textarea name="positive_events" placeholder="Write your positive aspects here..."></textarea>
+
+            <p class="question">Reflection, anything to add?</p>
+            <textarea name="reflections" placeholder="Write your reflections here..."></textarea>
+
+            <button type="submit">Submit my Love</button>
+        </form>
+    </main>
+</body>
+</html>
